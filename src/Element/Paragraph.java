@@ -2,7 +2,6 @@ package Element;
 
 public class Paragraph implements Element {
 	
-	private Element e;
 	private String text;
 	
 	public Paragraph (String text) {
@@ -11,7 +10,7 @@ public class Paragraph implements Element {
 
 	@Override
 	public void addElement(Element e) {
-		this.e = e;
+		
 	}
 
 	@Override

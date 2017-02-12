@@ -2,6 +2,10 @@ package Element;
 
 public class BulletList implements Element {
 
+	public BulletList(String text) {
+		
+	}
+	
 	@Override
 	public void addElement(Element e) {
 		

@@ -29,12 +29,6 @@ public class ToHTMLConverter implements TextConverter {
 	}
 
 	@Override
-	public void addBulletList(BulletList bulletlist) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
 	public void addTable(Table table) {
 		// TODO Auto-generated method stub
 		
@@ -43,5 +37,10 @@ public class ToHTMLConverter implements TextConverter {
 	@Override
 	public PlainTextDocument returnDocument() {
 		return new HTMLDocument(documentText);
+	}
+
+	@Override
+	public void addBulletList(BulletList bulletlist) {
+		documentText.append("<ul>");
 	}
 }

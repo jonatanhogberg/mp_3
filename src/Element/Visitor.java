@@ -14,15 +14,15 @@ public class Visitor {
 		converter.addParagraph(e);
 	}
 	
-	public void visit(BulletList e) {
-		converter.addBulletList(e);
-	}
-	
 	public void visit(Table e) {
 		converter.addTable(e);
 	}
 	
 	public void visit(Heading e) {
 		converter.addHeading(e);
+	}
+
+	public void visit(BulletList e) {
+		converter.addBulletList(e);
 	}
 }

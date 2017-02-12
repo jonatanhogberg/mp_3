@@ -6,22 +6,11 @@ import Element.Paragraph;
 import Element.Table;
 import TextDocument.*;
 
-public abstract class ElementFactory {
+public interface ElementFactory {
 	
-	public Heading createHeader(String text){
-		return null;	
-	};
-	
-	public Paragraph createParagraph(String text){
-		return null;
-	};
-	
-	public BulletList createBulletList(){
-		return null;	
-	};
-	
-	public Table createTable(){
-		return null;	
-	};
+	public Heading createHeading(String text);
+	public Paragraph createParagraph(String text);
+	public BulletList createBulletList();
+	public Table createTable();
 	
 }
