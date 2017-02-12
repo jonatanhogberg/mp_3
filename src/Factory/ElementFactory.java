@@ -1,5 +1,7 @@
 package Factory;
 
+import TextDocument.*;
+
 public abstract class ElementFactory {
 	
 	public Header createHeader(String text){
