@@ -5,7 +5,7 @@ import Element.Heading;
 import Element.Paragraph;
 import Element.Table;
 
-public class StructuredTextElementFactory implements  ElementFactory {
+public class StructuredTextElementFactory implements ElementFactory {
 
 	private static StructuredTextElementFactory instance = new StructuredTextElementFactory();
 	
@@ -14,7 +14,7 @@ public class StructuredTextElementFactory implements  ElementFactory {
 	public static StructuredTextElementFactory getInstance(){
 		return instance;
 	}
-
+	
 	@Override
 	public Heading createHeading(String text) {
 		return new Heading(text);
@@ -31,8 +31,7 @@ public class StructuredTextElementFactory implements  ElementFactory {
 	}
 
 	@Override
-	public Table createTable() {
-		// TODO Auto-generated method stub
-		return null;
+	public Table createTable(String text) {
+		return new Table(text);
 	}
 }

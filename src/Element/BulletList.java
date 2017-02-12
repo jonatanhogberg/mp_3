@@ -7,7 +7,7 @@ public class BulletList implements Element {
 	}
 	
 	@Override
-	public void addElement(Element e) {
+	public void addElement(SubElement e) {
 		
 	}
 

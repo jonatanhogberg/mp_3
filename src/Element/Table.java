@@ -2,9 +2,15 @@ package Element;
 
 
 public class Table implements Element {
+	
+	private String text;
 
+	public Table(String text) {
+		this.text = text;
+	}
+	
 	@Override
-	public void addElement(Element e) {
+	public void addElement(SubElement e) {
 		// TODO Auto-generated method stub
 		
 	}

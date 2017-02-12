@@ -9,7 +9,7 @@ public class Paragraph implements Element {
 	}
 
 	@Override
-	public void addElement(Element e) {
+	public void addElement(SubElement e) {
 		
 	}
 

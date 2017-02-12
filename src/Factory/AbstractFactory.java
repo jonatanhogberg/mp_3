@@ -6,15 +6,8 @@ public class AbstractFactory {
 		return StructuredTextElementFactory.getInstance();
 	}
 	
-	public MarkdownElementFactory getMarkdownElementFactory(){
-		return MarkdownElementFactory.getInstance();
+	public ConverterFactory getConverterFactory() {
+		return ConverterFactory.getInstance();
 	}
 	
-	public HTMLElementFactory getHTMLElementFactory(){
-		return HTMLElementFactory.getInstance();
-	}
-	
-	public LaTeXElementFactory getLaTeXElementFactory(){
-		return LaTeXElementFactory.getInstance();
-	}
 }

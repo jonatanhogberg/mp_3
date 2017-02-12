@@ -2,7 +2,7 @@ package Element;
 
 public interface Element {
 
-	public void addElement(Element e);
+	public void addElement(SubElement e);
 	public String getText();
 	public void accept(Visitor v);
 }
