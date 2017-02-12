@@ -1,28 +1,16 @@
 package Builder;
 
-public abstract class TextConverter {
+import Element.*;
+import TextDocument.PlainTextDocument;
 
-	public void preamble(){
-		
-	}
+public interface TextConverter {
+
+	public void preamble();
+	public void postamble();
+	public void addHeading(Heading heading);
+	public void addParagraph(Paragraph paragraph);
+	public void addBulletList(BulletList bulletlist);
+	public void addTable(Table table);
+	public PlainTextDocument returnDocument();
 	
-	public void postamble(){
-		
-	}
-	
-	public void addHeading(){
-		
-	}
-	
-	public void addParagraph(){
-		
-	}
-	
-	public void addBulletList(){
-		
-	}
-	
-	public void addTable(){
-		
-	}
 }

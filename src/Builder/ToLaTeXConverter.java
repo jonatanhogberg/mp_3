@@ -1,5 +1,8 @@
 package Builder;
 
-public class ToLaTeXConverter extends TextConverter{
+import Element.Element;
+
+public class ToLaTeXConverter {
+
 
 }

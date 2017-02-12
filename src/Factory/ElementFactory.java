@@ -1,10 +1,14 @@
 package Factory;
 
+import Element.BulletList;
+import Element.Heading;
+import Element.Paragraph;
+import Element.Table;
 import TextDocument.*;
 
 public abstract class ElementFactory {
 	
-	public Header createHeader(String text){
+	public Heading createHeader(String text){
 		return null;	
 	};
 	

@@ -1,23 +1,21 @@
 package TextDocument;
 
-public class StructuredTextDocument extends TextDocument implements Element{
+import java.util.*;
+import Element.Element;
 
-	@Override
-	public void addElement(Element e) {
-		// TODO Auto-generated method stub
-		
+public class StructuredTextDocument extends TextDocument {
+	
+	private List<Element> elements;
+	
+	public StructuredTextDocument() {
+		elements = new ArrayList<Element>();
 	}
 
-	@Override
-	public String getText() {
-		// TODO Auto-generated method stub
-		return null;
+	public void addElement(Element element) {
+		elements.add(element);
 	}
-
-	@Override
-	public Visitor accept(Visitor v) {
-		// TODO Auto-generated method stub
-		return null;
+	
+	public List<Element> getList() {
+		return elements;
 	}
-
 }
