@@ -16,14 +16,10 @@ public class Main {
 		Heading heading = new Heading("Heading¢");
 		Paragraph p1 = new Paragraph("Paragraph1");
 		Paragraph p2 = new Paragraph("Paragraph2");
-		BulletList bl = new BulletList();
-		Li li = new Li("1. Nils");
-		bl.addElement(li);
 		
 		std.addElement(heading);
 		std.addElement(p1);
 		std.addElement(p2);
-		std.addElement(bl);
 		
 		StructuredTextDocumentParser parser = new StructuredTextDocumentParser(new ToHTMLConverter(), std);
 		
