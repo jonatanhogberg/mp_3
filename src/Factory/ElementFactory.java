@@ -4,7 +4,6 @@ import Element.BulletList;
 import Element.Heading;
 import Element.Paragraph;
 import Element.Table;
-import TextDocument.*;
 
 public interface ElementFactory {
 	

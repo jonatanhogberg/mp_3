@@ -7,11 +7,6 @@ public class Heading implements Element {
 	public Heading(String text) {
 		this.text = text;
 	}
-	
-	@Override
-	public void addElement(SubElement e) {
-		
-	}
 
 	@Override
 	public String getText() {
@@ -22,4 +17,10 @@ public class Heading implements Element {
 	public void accept(Visitor v) {
 		v.visit(this);
 	}
+
+	@Override
+	public void addElement(Element e) {}
+
+	@Override
+	public Element nextElement() { return null; }
 }

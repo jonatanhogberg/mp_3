@@ -1,21 +1,25 @@
-package Element;
+package Element.sub;
 
+import Element.Element;
+import Element.Visitor;
 
-public class Table implements Element {
+public class Li implements Element {
 	
 	private String text;
-
-	public Table(String text) {
+	private Element e;
+	
+	public Li(String text) {
 		this.text = text;
 	}
-	
+
+	@Override
 	public void addElement(Element e) {
-		
+		this.e = e;
 	}
-	
+
 	@Override
 	public Element nextElement() {
-		return null;
+		return e;
 	}
 
 	@Override
@@ -27,4 +31,5 @@ public class Table implements Element {
 	public void accept(Visitor v) {
 		v.visit(this);
 	}
+
 }

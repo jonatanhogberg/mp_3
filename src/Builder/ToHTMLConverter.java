@@ -1,6 +1,7 @@
 package Builder;
 
 import Element.*;
+import Element.sub.Li;
 import TextDocument.HTMLDocument;
 import TextDocument.PlainTextDocument;
 
@@ -20,7 +21,7 @@ public class ToHTMLConverter implements TextConverter {
 
 	@Override
 	public void addHeading(Heading heading) {
-		documentText.append("<h1>").append(heading.toString()).append("</h1>");
+		documentText.append("<h1>").append(heading.getText()).append("</h1>");
 	}
 
 	@Override
@@ -30,8 +31,8 @@ public class ToHTMLConverter implements TextConverter {
 
 	@Override
 	public void addTable(Table table) {
-		// TODO Auto-generated method stub
-		
+		documentText.append("<table>");
+		documentText.append("</table>");
 	}
 
 	@Override
@@ -42,5 +43,13 @@ public class ToHTMLConverter implements TextConverter {
 	@Override
 	public void addBulletList(BulletList bulletlist) {
 		documentText.append("<ul>");
+		documentText.append("</ul>");
+	}
+
+	@Override
+	public void addLi(Li li) {
+		documentText.append("<li>");
+		documentText.append(li.getText());
+		documentText.append("</li>");
 	}
 }

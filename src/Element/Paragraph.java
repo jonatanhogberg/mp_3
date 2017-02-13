@@ -9,11 +9,6 @@ public class Paragraph implements Element {
 	}
 
 	@Override
-	public void addElement(SubElement e) {
-		
-	}
-
-	@Override
 	public String getText() {
 		return text;
 	}
@@ -22,4 +17,10 @@ public class Paragraph implements Element {
 	public void accept(Visitor v) {
 		v.visit(this);
 	}
+
+	@Override
+	public void addElement(Element e) {}
+
+	@Override
+	public Element nextElement() { return null;}
 }

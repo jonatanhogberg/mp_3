@@ -14,9 +14,9 @@ public class StructuredTextDocumentParser {
 	private Visitor visitor;
 	
 	public StructuredTextDocumentParser(TextConverter textConverter, StructuredTextDocument structuredTextDocument){
-		this.textConverter = textConverter;
 		this.structuredTextDocument = structuredTextDocument;
 		this.visitor = new Visitor(textConverter);
+		this.textConverter = textConverter;
 	}
 	
 	public void parse() {
@@ -26,6 +26,12 @@ public class StructuredTextDocumentParser {
 		
 		for (Element e : elements) {
 			e.accept(visitor);
+			
+			Element current = e.nextElement();
+		    while (current != null) {
+		        current.accept(visitor);
+		        current = current.nextElement();
+		    }
 		}
 		
 		textConverter.postamble();

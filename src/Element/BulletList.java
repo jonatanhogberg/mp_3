@@ -1,20 +1,21 @@
 package Element;
 
 public class BulletList implements Element {
+	
+	private Element e;
 
-	public BulletList(String text) {
-		
+	
+	public void addElement(Element e) {
+		this.e = e;
 	}
 	
-	@Override
-	public void addElement(SubElement e) {
-		
+	public Element nextElement() {
+		return e;
 	}
 
 	@Override
 	public String getText() {
-		// TODO Auto-generated method stub
-		return null;
+		return "";
 	}
 
 	@Override

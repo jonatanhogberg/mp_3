@@ -27,7 +27,7 @@ public class StructuredTextElementFactory implements ElementFactory {
 
 	@Override
 	public BulletList createBulletList(String text) {
-		return new BulletList(text);
+		return new BulletList();
 	}
 
 	@Override

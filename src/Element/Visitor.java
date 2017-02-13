@@ -1,6 +1,7 @@
 package Element;
 
 import Builder.TextConverter;
+import Element.sub.Li;
 
 public class Visitor {
 	
@@ -24,5 +25,9 @@ public class Visitor {
 
 	public void visit(BulletList e) {
 		converter.addBulletList(e);
+	}
+	
+	public void visit(Li e) {
+		converter.addLi(e);
 	}
 }
